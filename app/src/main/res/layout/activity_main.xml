@@ -33,16 +33,17 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/sim1"
                 android:layout_toEndOf="@id/sim1"
-                android:text="SIM1"
+                android:text="Sim1 imei"
                 android:layout_marginTop="5dp"
                 android:id="@+id/sim1text"
                 />
             <TextView
+                android:id="@+id/imei1TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sim1text"
                 android:layout_toRightOf="@id/sim1"
-                android:text="emai - 1337"/>
+                tools:text="364841337"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -61,15 +62,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/sim2"
-                android:text="SIM2"
+                android:text="Sim2 imei"
                 android:layout_marginTop="5dp"
                 android:id="@+id/sim2text"/>
             <TextView
+                android:id="@+id/imei2TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sim2text"
                 android:layout_toRightOf="@id/sim2"
-                android:text="emai - 36484"/>
+                tools:text="4815162342"/>
 
         </RelativeLayout>
 
@@ -115,6 +117,7 @@
                 app:cpv_outerContourSize="0dp"
                 app:cpv_rimWidth="5dp"
                 app:cpv_unit="%"
+                app:cpv_unitSize="10dp"
                 app:cpv_text="35"
                 android:id="@+id/memoryProgress"
                 android:layout_centerInParent="true"
@@ -136,6 +139,7 @@
                 app:cpv_outerContourSize="0dp"
                 app:cpv_rimWidth="5dp"
                 app:cpv_unit="%"
+                app:cpv_unitSize="10dp"
                 app:cpv_text="35"
                 android:layout_centerInParent="true"
                 app:cpv_barWidth="5dp"
@@ -155,13 +159,13 @@
                 app:cpv_outerContourSize="0dp"
                 app:cpv_rimWidth="5dp"
                 app:cpv_unit="%"
+                app:cpv_unitSize="10dp"
                 app:cpv_text="35"
                 android:layout_centerInParent="true"
                 app:cpv_barWidth="5dp"
                 app:cpv_textSize="20dp"
                 app:cpv_value="19"
                 app:cpv_showUnit="true"
-                app:cpv_unitSize="20dp"
                 app:cpv_unitPosition="right_top"
                 />
         </RelativeLayout>
@@ -185,11 +189,6 @@
                 app:cpv_showUnit="true"
                 />
         </RelativeLayout>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/permissionBTN"
-            android:text="Get permission"/>
 
     </LinearLayout>
 
