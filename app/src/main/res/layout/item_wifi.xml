@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="70dp"
     android:weightSum="2">
-
-
-
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/ssidTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="SSID: hostel"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:id="@+id/macTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="MAC: 04:bf:6d:06:2e:be"
+            android:layout_below="@id/ssidTV"/>
+        <TextView
+            android:id="@+id/securityTV"
+            tools:text="[WPA2-PSK-CCMP][WPS][ESS]"
+            android:maxLength="25"
+            android:ellipsize="end"
+            android:layout_below="@id/macTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/LEVEL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="LEVEL: HIGH"
+            android:layout_below="@id/securityTV"/>
+    </RelativeLayout>
 
 </LinearLayout>

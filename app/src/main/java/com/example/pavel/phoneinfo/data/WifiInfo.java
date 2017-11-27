@@ -20,11 +20,12 @@ public class WifiInfo {
         wifiManager = (WifiManager)this.context.getSystemService(context.WIFI_SERVICE);
     }
 
-    public String[] GetWifiList(){
+    public WifiElement[] GetWifiList(){
 
         apList = wifiManager.getScanResults();
 
         String wifiList[] = new String[apList.size()];
+        WifiElement wifiElement[] = new WifiElement[apList.size()];
 
         /**
          * This is how wifiList looks like.
@@ -46,13 +47,25 @@ public class WifiInfo {
          */
 
         for (int i = 0; i < apList.size(); i++) {
-            wifiList[i] = ((apList.get(i)).toString());
-            Log.e("wifi",wifiList[i]);
-            String[] item = wifiList[i].split(",");
+
+//            wifiList[i] = ((apList.get(i)).toString());
+//            Log.e("wifi",wifiList[i]);
+
+            String[] item = wifiList[i].split(", ");
+            String[] ssid = item[0].split(": ");
+            String[] mac = item[1].split(": ");
+            String[] security = item[2].split(": ");
+            String[] level = item[3].split(": ");
+
+            int intLevel = Integer.parseInt(level[0]);
+
+            wifiElement[i] = new WifiElement(ssid[1],mac[1],security[1],intLevel);
+
+
 
 
         }
-        return wifiList;
+        return wifiElement;
     }
 
 }
